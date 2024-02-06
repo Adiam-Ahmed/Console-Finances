@@ -7,7 +7,29 @@
   <title>M4 Challenge</title>
   <style>
 
-    .box {
+    button {
+      margin: 50px 20px 30px 40px;
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: darkgray;
+      position: relative;
+      animation: mymove 3s;
+      animation-fill-mode: forwards;
+      cursor: pointer;
+      border-color: darkgray;
+      font-size: 18px;
+    }
+
+    button {animation-timing-function: ease-in;}
+
+    @keyframes mymove {
+      from {left: 0px;}
+      to {left: 300px;}
+    }
+
+    #box {
+      display: none;
       width: 900px;
       height: 400px;
       background-color: gray;
@@ -15,30 +37,24 @@
       font-size: 18px;
       border: black;
     }
-    .item-box{
-      margin: 20px;
-      padding: 50px;
-
-    }
+ 
 </style>
 </head>
 <body>
   <h1 style="text-align:center;">Open the Console to See the Magic ✨! </h1>
 
-  <div class="box">
-    <div class="item-box">
+  
+   <button id="myButton">Or Double Click me</button>
+
+   <div id="box">
       <h2>Financial Analysis</br>
         ----------------</h2>
       <p id="total"></p>
       <p id="months"></p>
       <p id="averageChange"></p>
       <p id="Greatest_Increase"></p>
-      <p id="Greatest_Decrease"></p>
-
+      <p id="Greatest_Decrease"></p> 
     </div>
-   
-        
-  </div>
   
 
 

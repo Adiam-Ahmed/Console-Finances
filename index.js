@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var button = document.getElementById("myButton");
+  var mybox = document.getElementById("box"); 
+
+  button.addEventListener("click", function () {
+    if (mybox.style.display === "none") {
+      mybox.style.display = "block";
+      document.getElementById("myButton").innerHTML = "Click to hide"
+    } else {
+      mybox.style.display = "none";
+      document.getElementById("myButton").innerHTML = "Click to unhide"
+    }
+  });
+
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -126,3 +140,5 @@ document.getElementById("averageChange").innerHTML = `Average Change: ${averageC
 document.getElementById("Greatest_Increase").innerHTML = `Greatest Increase in Profits/Losses: ${maxIncreaseDate }  ($${maxIncrease})`;
 document.getElementById("Greatest_Decrease").innerHTML = `Greatest Decrease in Profits/Losses: ${maxDecreaseDate }  ($${maxDecrease})`;
 
+
+});
