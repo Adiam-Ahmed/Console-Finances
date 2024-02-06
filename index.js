@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.getElementById("myButton");
   var mybox = document.getElementById("box"); 
-
   button.addEventListener("click", function () {
     if (mybox.style.display === "none") {
       mybox.style.display = "block";
