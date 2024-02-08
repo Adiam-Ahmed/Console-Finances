@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var button = document.getElementById("myButton");
-  var mybox = document.getElementById("box");
+  let button = document.getElementById("myButton");
+  let mybox = document.getElementById("box");
   button.addEventListener("click", function () {
     if (mybox.style.display === "none") {
       mybox.style.display = "block";
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  var finances = [
+  let finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
     ['Mar-2010', 322013],
@@ -100,20 +100,20 @@ document.addEventListener("DOMContentLoaded", function () {
     ['Feb-2017', 671099],
   ];
 
-  var months = finances.length;
-  var total = 0;
-  var avarage = 0;
-  var maxIncrease = 0;
-  var maxDecrease = 0;
-  var maxIncreaseDate = "";
-  var maxDecreaseDate = "";
+  letmonths = finances.length;
+  let total = 0;
+  let avarage = 0;
+  let maxIncrease = 0;
+  let maxDecrease = 0;
+  let maxIncreaseDate = "";
+  let maxDecreaseDate = "";
 
   for (let index = 0; index < finances.length; index++) {
     total += finances[index][1];
   };
 
   for (let index = 1; index < finances.length; index++) {
-    var change = finances[index][1] - finances[index - 1][1]
+    let change = finances[index][1] - finances[index - 1][1]
     avarage += change;
     if (change > maxIncrease) {
       maxIncrease = change;
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  var averageChange = (Math.round((avarage / (months - 1)) * 100) / 100);
+  let averageChange = (Math.round((avarage / (months - 1)) * 100) / 100);
 
   console.log("Total Months: " + months);
   console.log("Total: " + total);
